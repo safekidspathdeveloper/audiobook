@@ -1,0 +1,6 @@
+{
+  "name": "Kids Audiobook Player",
+  "description": "A colorful, interactive, and kid-friendly audiobook player. Features bold designs, big story covers, playful animations, voice narration, and simple safety constraints for parents and kids.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

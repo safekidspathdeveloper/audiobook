@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Inter:wght@400..900&family=JetBrains+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Fredoka", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Kid safety constraints styling & bounciness */
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 4s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-1.5deg); }
+  50% { transform: rotate(1.5deg); }
+}
+
+.animate-wiggle {
+  animation: wiggle 3s ease-in-out infinite;
+}
+
+/* Floating custom ambient story bubbles */
+@keyframes bubble-up {
+  0% {
+    transform: translateY(110vh) translateX(0) scale(0.6);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-20vh) translateX(40px) scale(1.3);
+    opacity: 0;
+  }
+}
+
+.ambient-bubble {
+  position: absolute;
+  bottom: -150px;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: bubble-up 15s linear infinite;
+  z-index: 10;
+}
+
+/* Vibrant Palette custom styles */
+.bg-playful {
+  background: radial-gradient(circle at top right, #FFF7ED, #FFEDD5) !important;
+}
+
+.pop-blue {
+  border: 6px solid #38BDF8 !important;
+  box-shadow: 8px 8px 0px #0EA5E9 !important;
+  transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.pop-blue:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 12px 12px 0px #0EA5E9 !important;
+}
+
+.pop-yellow {
+  border: 6px solid #FACC15 !important;
+  box-shadow: 8px 8px 0px #EAB308 !important;
+  transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.pop-yellow:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 12px 12px 0px #EAB308 !important;
+}
+
+.control-btn {
+  border: 4px solid #ffffff !important;
+  box-shadow: 4px 4px 0px rgba(0,0,0,0.15) !important;
+  transition: all 0.1s ease-in-out;
+}
+
+.control-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 6px 6px 0px rgba(0,0,0,0.2) !important;
+}
+
+.control-btn:active {
+  transform: translateY(1px);
+  box-shadow: 2px 2px 0px rgba(0,0,0,0.1) !important;
+}
+
+/* Neon Neo-Brutalist popping effects for buttons */
+.pop-out-yellow {
+  background-color: #fde047; /* yellow-300 */
+  border: 4px solid #0f172a; /* slate-900 */
+  box-shadow: 4px 4px 0px 0px #0f172a;
+  transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.pop-out-yellow:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 7px 7px 0px 0px #0f172a;
+  background-color: #facc15; /* yellow-400 */
+}
+
+.pop-out-yellow:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px #0f172a;
+}
+
+.pop-out-blue {
+  background-color: #7dd3fc; /* sky-300 */
+  border: 4px solid #0f172a;
+  box-shadow: 4px 4px 0px 0px #0f172a;
+  transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.pop-out-blue:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 7px 7px 0px 0px #0f172a;
+  background-color: #38bdf8; /* sky-400 */
+}
+
+.pop-out-blue:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px #0f172a;
+}
+
+.pop-out-card {
+  border: 4px solid #0f172a;
+  box-shadow: 6px 6px 0px 0px #0f172a;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.pop-out-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 10px 10px 0px 0px #0f172a;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 14px;
+}
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+  border-left: 2px solid #e2e8f0;
+}
+::-webkit-scrollbar-thumb {
+  background: #fed7aa; /* orange-200 */
+  border: 3px solid #f8fafc;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #fdba74; /* orange-300 */
+}
